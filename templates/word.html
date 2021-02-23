@@ -1,0 +1,160 @@
+{% load static %}
+{% static "images" as baseUrl %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>English Dictionary</title>
+<meta name="description" content="English Dictionary using Django (pyDictionary API)">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Aniket Phulwade">
+<meta name=viewport content="width=device-width, initial-scale=1, user-scalable=yes">
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+<link href="{% static 'images/favicon1.png' %}" rel="icon">
+
+<style>
+
+body{
+  padding: 0;
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(163,175,243,1) 0%, rgba(220,182,232,1) 100.2% );}
+.heading{
+  color:rgb(0, 0, 0);
+  position:relative;
+  text-align: center;
+  font-size: 25px;
+  margin: 0 30%;
+/*     left:40%; */
+  font-family: 'Lato', sans-serif;
+  font-style: underline;
+
+}
+
+.search{
+
+  position: absolute;
+  left:50%;
+  transform: translate(-50% , -50%);
+  background:black ;
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px;
+ 
+}
+
+.search:hover > .search-txt{
+  width: 160px;
+  padding: 0 10px;
+  color: wheat;
+  font-family: 'Pangolin', cursive;
+}
+.search:hover > .searchButton{
+
+  background: white ;
+}
+
+.searchButton{
+    color: red;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background:#ABB2B9 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Resize the wrap to see the search bar change!*/
+
+.search-txt{
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color:wheat ;
+  font-size: 16px;
+  transition: ease-in 0.4s;
+  line-height: 40px;
+  width: 110px;
+  font-family: 'Pangolin', cursive;
+}
+.fas fa-search{
+  font-weight: 200;
+  font-size: 40px;
+}
+.box { 
+    line-height:200px;
+    height:auto;
+    width: 450px; 
+    margin:auto;
+    padding:10px; 
+   
+    box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
+
+  
+  
+  
+  background: white;
+  opacity: 0.8;
+  border-radius: 5px;
+  }
+  .asd {
+    text-align: center;
+    font-family:"Times New Roman", Times, serif;;
+    color: rgb(12, 12, 12);
+  }
+
+  h3 {
+
+    color: rgb(12, 12, 11);
+    text-shadow: #fdfeff;
+  }
+
+.vertical-middle { line-height:1.2; 
+  display:inline-block;
+  vertical-align:middle; 
+  }
+</style>
+</head>
+<body>
+  <div class="heading">
+    <h1>English Dictionary</h1>
+</div><br>
+  <form action="word">
+    <div class="search">
+       <input required type="text" name="search" class="search-txt" placeholder="Input Your Word Here" >
+       <button type="submit" class="searchButton">
+         <i class="fas fa-search"></i>
+      </button>
+    </div>
+  </form> <br><br><br><br>
+ <div class="box">
+   
+   <div class="vertical-middle">
+    <h2 class="asd"><strong>{{search}}</strong></h2>
+   <h3> <u>Meaning</u>  :{{meaning}}</h3>
+   
+   <h3> <u> Synonyms</u>: {% for synonym in synonyms %}
+       {{synonym}},
+       {% endfor %}</h3>
+   
+   
+   <h3> <u>Antonyms</u> : {% for antonym in antonyms %}
+       {{antonym}},
+       {% endfor %}</h3>
+   
+</div>
+</div>
+</body>
+</html>
