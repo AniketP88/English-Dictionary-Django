@@ -1,5 +1,6 @@
 # English Dictionary using Django
 ## _The way better to find_
+Live <a href="https://dictionary-app1.herokuapp.com/">here</a>
 <img src="static/images/Screenshot (68).png">
 
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
@@ -21,7 +22,7 @@ pip install pyDictionary
 Install the dependencies.
 
 ```sh
-cd dictionary_app
+cd english-dictionary
 pip -r install requirements.txt
 python manage.py runserver
 ```
