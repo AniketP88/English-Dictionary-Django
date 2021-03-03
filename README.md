@@ -3,7 +3,6 @@
 Live <a href="https://dictionary-app1.herokuapp.com/">here</a>
 <img src="static/images/Screenshot (68).png">
 
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
 
 English dictionary with django using pyDictionary API 
 
