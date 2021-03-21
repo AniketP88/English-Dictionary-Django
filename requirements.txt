@@ -12,7 +12,7 @@ django-bootstrap-navbar==0.0.22
 django-crispy-forms==1.10.0
 django-heroku==0.3.1
 django-widget-tweaks==1.4.1
-djangorestframework==3.7.3
+djangorestframework==3.11.2
 futures==3.1.1
 goslate==1.5.1
 gunicorn==20.0.4
