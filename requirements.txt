@@ -18,7 +18,7 @@ goslate==1.5.1
 gunicorn==20.0.4
 idna==2.10
 mysqlclient==2.0.3
-Pillow==8.1.1
+Pillow==8.2.0
 psycopg2==2.8.6
 pycparser==2.20
 PyDictionary==2.0.1
