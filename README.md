@@ -1,5 +1,5 @@
 # English Dictionary using Django
-## _The way better to find_
+## _The best way to find_
 Live <a href="https://dictionary-app1.herokuapp.com/">here</a>
 <img src="static/images/Screenshot (68).png">
 
